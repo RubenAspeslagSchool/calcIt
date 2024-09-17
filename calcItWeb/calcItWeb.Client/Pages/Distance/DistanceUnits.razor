@@ -1,0 +1,29 @@
+﻿@page "/distanceUnits"
+@namespace  calcItWeb.Client.Pages.Distance
+@rendermode InteractiveAuto
+@using calcItWeb.Client.Models.Distance
+
+<h3>Distance Units Conversion</h3>
+
+<EditForm Model="@_distanceUnitModel">
+    <div class="form-group">
+        <label for="conversionType">What do you want to convert</label>
+        <InputSelect id="conversionType" @bind-Value="@_distanceUnitModel.ConversionType">
+            <option value="from metric">From Metric</option>
+            <option value="from imperial">From Imperial</option>
+        </InputSelect>
+    </div>
+
+    @if (_distanceUnitModel.ConversionType == "from metric")
+    {
+        <DistanceFromMatric distanceUnitModel="@_distanceUnitModel"></DistanceFromMatric>
+    }
+    else if (_distanceUnitModel.ConversionType == "from imperial")
+    {
+        <DistanceFromImperial distanceUnitModel="@_distanceUnitModel"></DistanceFromImperial>
+    }
+</EditForm>
+
+@code {
+    private DistanceModel _distanceUnitModel = new DistanceModel();
+}

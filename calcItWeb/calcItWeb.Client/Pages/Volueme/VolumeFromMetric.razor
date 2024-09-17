@@ -1,0 +1,30 @@
+﻿@using calcItWeb.Client.Models.Volume
+@namespace calcItWeb.Client.Pages.Volume
+
+<div id="fromMetric">
+    <div class="form-group">
+        <InputNumber id="L" @bind-Value="volumeUnitModel.MetricUnits.Liter" class="form-control" />
+        <label for="L">Liter</label>
+        <InputNumber id="ML" @bind-Value="volumeUnitModel.MetricUnits.Milliliter" class="form-control" />
+        <label for="ML">Milliliter</label>
+    </div>
+    <h3>Conversions</h3>
+    <div class="conversions">
+        <div class="metric">
+            <h4>Metric Conversions</h4>
+            <p>@volumeUnitModel.MetricUnits.ToLiter() Liters</p>
+            <p>@volumeUnitModel.MetricUnits.ToMilliliter() Milliliters</p>
+        </div>
+        <div class="imperial">
+            <h4>Imperial Conversions</h4>
+            <p>@volumeUnitModel.MetricUnits.ToImperial().Gallon gallons</p>
+            <p>@volumeUnitModel.MetricUnits.ToImperial().Quart quarts</p>
+            <p>@volumeUnitModel.MetricUnits.ToImperial().Pint pints</p>
+            <p>@volumeUnitModel.MetricUnits.ToImperial().FluidOunce fl oz</p>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public VolumeModel? volumeUnitModel { get; set; }
+}

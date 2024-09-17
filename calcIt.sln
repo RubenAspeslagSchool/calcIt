@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calcItWeb", "calcItWeb\calcItWeb\calcItWeb.csproj", "{955CF274-F10B-4BBD-84E1-16CCF893BCCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calcItWeb.Client", "calcItWeb\calcItWeb.Client\calcItWeb.Client.csproj", "{EEA689C3-B459-4BE2-B04B-60DDE197EC0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{955CF274-F10B-4BBD-84E1-16CCF893BCCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955CF274-F10B-4BBD-84E1-16CCF893BCCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955CF274-F10B-4BBD-84E1-16CCF893BCCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{955CF274-F10B-4BBD-84E1-16CCF893BCCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEA689C3-B459-4BE2-B04B-60DDE197EC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA689C3-B459-4BE2-B04B-60DDE197EC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA689C3-B459-4BE2-B04B-60DDE197EC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEA689C3-B459-4BE2-B04B-60DDE197EC0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6271BA5-B168-4AB7-B7F1-62F8518F0953}
+	EndGlobalSection
+EndGlobal

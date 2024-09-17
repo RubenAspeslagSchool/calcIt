@@ -1,0 +1,29 @@
+﻿@page "/volumeUnits"
+@namespace calcItWeb.Client.Pages.Volume
+@rendermode InteractiveAuto
+@using calcItWeb.Client.Models.Volume
+
+<h3>Volume Units Conversion</h3>
+
+<EditForm Model="@_volumeUnitModel">
+    <div class="form-group">
+        <label for="conversionType">What do you want to convert?</label>
+        <InputSelect id="conversionType" @bind-Value="@_volumeUnitModel.ConversionType">
+            <option value="from metric">From Metric</option>
+            <option value="from imperial">From Imperial</option>
+        </InputSelect>
+    </div>
+
+    @if (_volumeUnitModel.ConversionType == "from metric")
+    {
+        <VolumeFromMetric volumeUnitModel="@_volumeUnitModel"></VolumeFromMetric>
+    }
+    else if (_volumeUnitModel.ConversionType == "from imperial")
+    {
+        <VolumeFromImperial volumeUnitModel="@_volumeUnitModel"></VolumeFromImperial>
+    }
+</EditForm>
+
+@code {
+    private VolumeModel _volumeUnitModel = new VolumeModel();
+}

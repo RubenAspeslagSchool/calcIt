@@ -1,0 +1,21 @@
+﻿@page "/temperature"
+@namespace calcItWeb.Client.Pages.Temperature
+@rendermode InteractiveAuto
+@using Models.Temperature
+
+<h3>Temperature</h3>
+<EditForm Model="@_temperatureModel">
+    <div class="form-group">
+        <InputNumber id="C" @bind-Value="_temperatureModel.Celsius" class="form-control" />
+        <label for="C">°C</label>
+        <InputNumber id="K" @bind-Value="_temperatureModel.Kelvin" class="form-control" />
+        <label for="K">°K</label>
+        <InputNumber id="F" @bind-Value="_temperatureModel.Fahrenheit" class="form-control" />
+        <label for="F">°F</label>
+    </div>
+</EditForm>
+
+
+@code {
+    private TemperatureModel _temperatureModel = new TemperatureModel();
+}

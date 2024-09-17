@@ -1,0 +1,40 @@
+﻿@using calcItWeb.Client.Models.Distance
+
+<div id="fromMetric">
+    <div class="form-group">
+        <InputNumber id="KM" @bind-Value="distanceUnitModel.MetricUnits.Kilometer" class="form-control" />
+        <label for="KM">KM</label>
+        <InputNumber id="M" @bind-Value="distanceUnitModel.MetricUnits.Meter" class="form-control" />
+        <label for="M">M</label>
+        <InputNumber id="DM" @bind-Value="distanceUnitModel.MetricUnits.Decimeter" class="form-control" />
+        <label for="DM">DM</label>
+        <InputNumber id="CM" @bind-Value="distanceUnitModel.MetricUnits.Centimeter" class="form-control" />
+        <label for="CM">CM</label>
+        <InputNumber id="MM" @bind-Value="distanceUnitModel.MetricUnits.Milimeter" class="form-control" />
+        <label for="MM">MM</label>
+    </div>
+    <h3>conversions</h3>
+    <div class="conversions">
+        <div class="metric">
+            <h4>metric conversions</h4>
+            <p>@distanceUnitModel.MetricUnits.ToKilometer() KM</p>
+            <p>@distanceUnitModel.MetricUnits.ToMeter() M</p>
+            <p>@distanceUnitModel.MetricUnits.ToDecimeter() DM</p>
+            <p>@distanceUnitModel.MetricUnits.ToCentimeter() CM</p>
+            <p>@distanceUnitModel.MetricUnits.ToMilimeter() MM</p>
+        </div>
+        <div class="imperial">
+            <h4>imperial conversions</h4>
+            <p>@distanceUnitModel.MetricUnits.ToImperial().Miles miles</p>
+            <p>@distanceUnitModel.MetricUnits.ToImperial().Yards yards</p>
+            <p>@distanceUnitModel.MetricUnits.ToImperial().Feet feed</p>
+            <p>@distanceUnitModel.MetricUnits.ToImperial().Inches inch</p>
+        </div>
+    </div>
+
+</div>
+
+@code {
+    [Parameter] public DistanceModel? distanceUnitModel { get; set; }
+
+}
