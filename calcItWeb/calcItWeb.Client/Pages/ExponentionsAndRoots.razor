@@ -6,24 +6,27 @@
 
 <label for="input">Please enter a number:</label>
 <InputNumber id="input" @bind-Value="_input" />
+<div class="outputs">
+    <div class="Exponentiations">
+        <h4>Exponentiations:</h4>
+        <ul>
+            @for (int i = 0; i <= 30; i++)
+            {
+                <li>@_input <sup>@i</sup> = @Math.Pow(_input, i)</li>
+            }
+        </ul>
+    </div>
+    <div class="Roots">
+        <h4>Roots:</h4>
+        <ul>
 
-<h4>Exponentiations:</h4>
-<ul>
-    @for (int i = 0; i <= 30; i++)
-    {
-        <li>@_input <sup>@i</sup> = @Math.Pow(_input, i)</li>
-    }
-</ul>
-
-<h4>Roots:</h4>
-<ul>
-    
-    @for (int i = 1; i <= 30; i++)
-    {
-        <li>@i &#8730 @_input = @Math.Pow(_input, 1.0 / i)</li>
-    }
-</ul>
-
+            @for (int i = 1; i <= 30; i++)
+            {
+                <li>@i &#8730 @_input = @Math.Pow(_input, 1.0 / i)</li>
+            }
+        </ul>
+    </div>
+</div>
 @code {
     private int _input = 2;  
 }

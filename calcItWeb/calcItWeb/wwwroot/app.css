@@ -40,3 +40,18 @@ h1:focus {
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
 }
+
+
+.conversions {
+    display: flex;
+    align-content:space-around;
+}
+
+.conversions div {
+    padding:10%;
+}
+
+.outputs {
+    display: flex;
+    align-content: space-around;
+}
