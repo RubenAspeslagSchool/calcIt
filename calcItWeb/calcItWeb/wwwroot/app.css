@@ -56,3 +56,6 @@ h1:focus {
     align-content: space-around;
 }
 
+#pi {
+    word-wrap:anywhere;
+} 
