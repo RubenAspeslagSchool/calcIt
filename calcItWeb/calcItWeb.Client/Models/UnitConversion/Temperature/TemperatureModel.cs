@@ -1,4 +1,4 @@
-﻿namespace calcItWeb.Client.Models.Temperature
+﻿namespace calcItWeb.Client.Models.UnitConversion.Temperature
 {
     public class TemperatureModel
     {

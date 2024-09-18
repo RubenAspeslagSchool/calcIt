@@ -1,7 +1,7 @@
 ﻿
 using System.ComponentModel;
 
-namespace calcItWeb.Client.Models.Volume
+namespace calcItWeb.Client.Models.UnitConversion.Volume
 {
     public class ImperialVolumeUnits : INotifyPropertyChanged
     {
@@ -14,7 +14,7 @@ namespace calcItWeb.Client.Models.Volume
         // Convert all to fluid ounces
         public double ToFluidOunce()
         {
-            return (Gallon * 128) + (Quart * 32) + (Pint * 16) + FluidOunce;
+            return Gallon * 128 + Quart * 32 + Pint * 16 + FluidOunce;
         }
 
         // Convert all to gallons
@@ -34,7 +34,7 @@ namespace calcItWeb.Client.Models.Volume
 
             return new MetricVolumeUnits
             {
-                Liter = (int)(totalLiters),
+                Liter = (int)totalLiters,
                 Milliliter = milliliters % 1000
             };
         }

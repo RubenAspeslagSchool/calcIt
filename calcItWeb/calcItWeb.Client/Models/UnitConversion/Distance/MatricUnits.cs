@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace calcItWeb.Client.Models.Distance
+namespace calcItWeb.Client.Models.UnitConversion.Distance
 {
     public class MetricUnits : INotifyPropertyChanged
     {
@@ -15,7 +15,7 @@ namespace calcItWeb.Client.Models.Distance
         // Convert all to milimeters
         public double ToMilimeter()
         {
-            return (Kilometer * 1000000) + (Meter * 1000) + (Decimeter * 100) + (Centimeter * 10) + Milimeter;
+            return Kilometer * 1000000 + Meter * 1000 + Decimeter * 100 + Centimeter * 10 + Milimeter;
         }
 
         // Convert all to centimeters

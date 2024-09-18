@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 
-namespace calcItWeb.Client.Models.Volume
+namespace calcItWeb.Client.Models.UnitConversion.Volume
 {
-    public class VolumeModel: INotifyPropertyChanged
+    public class VolumeModel : INotifyPropertyChanged
     {
         public ImperialVolumeUnits ImperialUnits { get; set; }
         public MetricVolumeUnits MetricUnits { get; set; }

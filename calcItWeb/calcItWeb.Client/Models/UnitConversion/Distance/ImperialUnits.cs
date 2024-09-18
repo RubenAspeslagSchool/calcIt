@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace calcItWeb.Client.Models.Distance
+namespace calcItWeb.Client.Models.UnitConversion.Distance
 {
     public class ImperialUnits : INotifyPropertyChanged
     {
@@ -14,7 +14,7 @@ namespace calcItWeb.Client.Models.Distance
         // Convert all to inches
         public int ToInches()
         {
-            return (Miles * 63360) + (Yards * 36) + (Feet * 12) + Inches;
+            return Miles * 63360 + Yards * 36 + Feet * 12 + Inches;
         }
 
         // Convert all to feet

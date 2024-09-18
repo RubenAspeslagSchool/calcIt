@@ -1,0 +1,13 @@
+﻿@page "/calculator"
+@rendermode InteractiveAuto
+
+<h3>Calculator</h3>
+<EditForm Model="@_calculatorModel">
+    <InputText @bind-Value="_calculatorModel.calculatorInput"></InputText>
+</EditForm>
+
+<p id="resold">@_calculatorModel.calculatorOutput</p>
+
+@code {
+    CalculatorModel _calculatorModel = new CalculatorModel();
+}
