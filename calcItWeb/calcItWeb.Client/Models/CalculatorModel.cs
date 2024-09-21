@@ -1,4 +1,4 @@
-﻿using NCalc;  
+﻿using NCalc;
 namespace calcItWeb.Client.Models
 {
     public class CalculatorModel

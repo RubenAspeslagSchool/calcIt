@@ -1,0 +1,38 @@
+﻿@page "/IP"
+@rendermode InteractiveAuto
+<h3>IP</h3>
+
+<article id="IP">
+    <section id="IPToBinary">
+        <h4>IP to binary</h4>
+        <InputText @bind-Value="_iPToBinaryModel.IPInNumbers"></InputText>
+        <p>@_iPToBinaryModel.IPOutInBinary</p>
+    </section>
+
+    <section id="IPSubnets">
+        <label for="IPSubnetsIP">IP Address:</label>
+        <InputText id="IPSubnetsIP" @bind-Value="subnetMaskModel.IpAddress"></InputText>
+        <p>@subnetMaskModel.IpAddress</p> <!-- Check if the value is being set -->
+
+        <label for="IPMask">Subnet Mask:</label>
+        <InputNumber id="IPMask" @bind-Value="subnetMaskModel.SubnetMask"></InputNumber>
+
+        <label for="CheckIP">Check if IP address is in range:</label>
+        <InputText id="CheckIP" @bind-Value="subnetMaskModel.CheckIPAddress"></InputText> <!-- Changed to InputText -->
+
+        <p>Is the address in range: @subnetMaskModel.CheckIpAddressInRangeSpecified()</p>
+
+        <p>IP Addresses in range:</p>
+        <ul>
+            @foreach (var address in subnetMaskModel.IpAddressesInRange)
+            {
+                <li>@address</li>
+            }
+        </ul>
+
+    </section>
+</article>
+@code {
+    IPToBinaryModel _iPToBinaryModel = new IPToBinaryModel();
+    SubnetMaskModel subnetMaskModel = new SubnetMaskModel();
+}
